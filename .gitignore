@@ -1,0 +1,9 @@
+# Dependencies
+node_modules
+
+# Snyk
+.snyk
+
+# Editors
+.vscode
+.idea
