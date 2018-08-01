@@ -1,0 +1,17 @@
+{
+  "name": "electron-typescript-react-boilerplate",
+  "version": "1.0.0",
+  "description": "A boilerplate for electron typescript and react",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "electron",
+    "typescript",
+    "react",
+    "node"
+  ],
+  "author": "Adarsh",
+  "license": "MIT"
+}
