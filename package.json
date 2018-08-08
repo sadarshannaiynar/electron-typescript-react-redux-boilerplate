@@ -5,7 +5,9 @@
   "main": "src/main/dist/main/index.js",
   "scripts": {
     "build": "cross-env NODE_ENV=prod gulp build",
-    "build:prod": "cross-env NODE_ENV=prod webpack --config webpack.config.electron.js",
+    "lint:renderer": "tslint -p ./src/renderer/tsconfig.json",
+    "lint:main": "tslint -p ./src/main/tsconfig.json",
+    "lint": "npm run lint:renderer && npm run lint:main",
     "prestart:main": "npm run build",
     "start:main": "electron ./src/main/dist/main/index.js",
     "start:main-dev": "cross-env NODE_ENV=dev gulp start:devwatch",
@@ -69,6 +71,7 @@
     "sass-loader": "^7.1.0",
     "sinon": "^6.1.4",
     "snyk": "^1.90.0",
+    "spawn-sync": "^2.0.0",
     "style-loader": "^0.21.0",
     "stylelint": "8.4.0",
     "stylelint-config-recommended-scss": "^3.2.0",
