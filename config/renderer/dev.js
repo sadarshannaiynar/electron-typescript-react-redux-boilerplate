@@ -5,7 +5,7 @@ const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 const baseConfig = require('./base');
 
-const APP_DIR = path.resolve(__dirname, '../src/client');
+const APP_DIR = path.resolve(__dirname, '../../src/renderer');
 
 const config = _merge({
   mode: 'development',
@@ -25,6 +25,11 @@ const config = _merge({
   ],
   devtool: 'source-map',
 }, baseConfig);
+
+config.module.rules = config.module.rules.concat({
+  test: /\.(scss|sass)$/,
+  use: ['style-loader', 'css-loader', 'sass-loader', 'postcss-loader'],
+});
 
 config.plugins = [].concat(baseConfig.plugins, [
   new webpack.LoaderOptionsPlugin({ options: {}}),

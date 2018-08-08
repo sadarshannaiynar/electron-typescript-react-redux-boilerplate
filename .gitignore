@@ -7,3 +7,10 @@ node_modules
 # Editors
 .vscode
 .idea
+
+# Build files
+src/main/dist/main
+src/main/dist/renderer
+
+# Log
+*.log

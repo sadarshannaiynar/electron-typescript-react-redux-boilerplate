@@ -1,6 +1,7 @@
 const path = require('path');
 
-const BUILD_DIR = path.resolve(__dirname, '../src/app/dist');
+const BUILD_DIR = path.resolve(__dirname, '../../src/main/dist/renderer');
+const APP_DIR = path.resolve(__dirname, '../../src/renderer');
 
 module.exports = {
   target: 'electron-renderer',
@@ -24,16 +25,13 @@ module.exports = {
         enforce: 'pre',
         test: /\.js$/,
         exclude: /node_modules/,
+        include: APP_DIR,
         use: ['source-map-loader'],
       },
       {
         test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
         use: ['ts-loader'],
-      },
-      {
-        test: /\.(scss|sass)$/,
-        use: ['style-loader', 'css-loader', 'sass-loader', 'postcss-loader'],
       },
       {
         test: /\.(png|svg|jpg|gif|woff|woff2)$/,

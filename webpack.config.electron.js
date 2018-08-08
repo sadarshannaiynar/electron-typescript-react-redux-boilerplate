@@ -1,8 +1,8 @@
 const env = process.env.NODE_ENV || 'prod';
 const allowedEnvs = ['dev'];
 
-const dev = require('./config/dev');
-const prod = require('./config/prod');
+const dev = require('./config/main/dev');
+const prod = require('./config/main/prod');
 
 const configs = {
   dev,
