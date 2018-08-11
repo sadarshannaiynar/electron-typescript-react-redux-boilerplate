@@ -9,6 +9,7 @@ module.exports = {
     path: BUILD_DIR,
     filename: 'bundle.js',
     chunkFilename: '[name].bundle.js',
+    publicPath: '/dist',
   },
   resolve: {
     extensions: [
@@ -29,9 +30,27 @@ module.exports = {
         use: ['source-map-loader'],
       },
       {
+        enforce: 'pre',
         test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
-        use: ['ts-loader'],
+        include: APP_DIR,
+        use: [{
+          loader: 'tslint-loader',
+          options: {
+            emitErrors: true,
+            failOnHint: true,
+          }
+        }],
+      },
+      {
+        test: /\.(ts|tsx)$/,
+        exclude: /node_modules/,
+        use: [{
+          loader: 'ts-loader',
+          options: {
+            happyPackMode: true,
+          },
+        }],
       },
       {
         test: /\.(png|svg|jpg|gif|woff|woff2)$/,

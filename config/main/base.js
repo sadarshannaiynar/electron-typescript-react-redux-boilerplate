@@ -26,6 +26,19 @@ module.exports = {
         include: APP_DIR,
       },
       {
+        enforce: 'pre',
+        test: /\.ts$/,
+        exclude: /node_modules/,
+        include: APP_DIR,
+        use: [{
+          loader: 'tslint-loader',
+          options: {
+            emitErrors: true,
+            failOnHint: true,
+          }
+        }],
+      },
+      {
         test: /\.ts$/,
         use: ['ts-loader'],
         exclude: /node_modules/,

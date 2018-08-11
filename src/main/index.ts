@@ -1,9 +1,14 @@
 import * as electron from 'electron';
 import * as path from 'path';
 
-const fixPath = require('fix-path');
-
-if (process.platform === 'darwin') fixPath();
+if (process.platform === 'darwin') {
+  process.env.PATH = [
+    './node_modules/.bin',
+    '/.nodebrew/current/bin',
+    '/usr/local/bin',
+    process.env.PATH,
+  ].join(':');
+}
 
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
@@ -11,11 +16,11 @@ const BrowserWindow = electron.BrowserWindow;
 let mainWindow: electron.BrowserWindow;
 const createWindow = () => {
   mainWindow = new BrowserWindow({
-    width: 800,
     height: 600,
     webPreferences: {
-      webSecurity: false,
+      webSecurity: (process.env.NODE_ENV !== 'development'),
     },
+    width: 800,
   });
 
   if (process.env.NODE_ENV === 'development') {
