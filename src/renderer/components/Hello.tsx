@@ -1,14 +1,14 @@
 import * as React from 'react';
 import { IHelloContainerDispatch, IHelloContainerState } from '../containers/HelloContainer';
 
-export type Props = IHelloContainerState & IHelloContainerDispatch;
+export type HelloComponentProps = IHelloContainerState & IHelloContainerDispatch;
 
-interface IState {
+interface IHelloComponentState {
   value: number;
 }
 
-export class HelloComponent extends React.Component<Props, IState> {
-  constructor(props: Props) {
+export class HelloComponent extends React.Component<HelloComponentProps, IHelloComponentState> {
+  constructor(props: HelloComponentProps) {
     super(props);
     this.state = {
       value: props.value,
@@ -16,7 +16,7 @@ export class HelloComponent extends React.Component<Props, IState> {
     this.handleValueChange = this.handleValueChange.bind(this);
   }
 
-  componentWillReceiveProps(nextProps: Props) {
+  componentWillReceiveProps(nextProps: HelloComponentProps) {
     this.setState({
       value: nextProps.value,
     });
@@ -33,14 +33,20 @@ export class HelloComponent extends React.Component<Props, IState> {
   render() {
     return (
       <div>
-        <div>Hello World</div>
-        <h4 className="name">{this.state.value}</h4>
-        <button onClick={this.props.increment}>Increment</button>
+        <div>Hello World!</div>
+        <h4 className="value">{this.state.value}</h4>
+        <button className="increment-btn" onClick={this.props.increment}>Increment</button>
         &nbsp;
-        <button onClick={this.props.decrement}>Decrement</button>
+        <button className="decrement-btn" onClick={this.props.decrement}>Decrement</button>
         <br /><br />
         Type a value:
         <input type="text" onChange={this.handleValueChange} />
+        <br /><br />
+        <button className="execute-ls-btn" onClick={this.props.executeLs}>Execute LS Command</button>
+        <br /><br />
+        <div className="output">Output: {this.props.output}</div>
+        <br /><br />
+        <div className="error">Error: {this.props.error}</div>
       </div>
     );
   }

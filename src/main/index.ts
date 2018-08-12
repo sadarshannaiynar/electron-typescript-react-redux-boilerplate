@@ -1,5 +1,6 @@
 import * as electron from 'electron';
 import * as path from 'path';
+import tasks from './tasks';
 
 if (process.platform === 'darwin') {
   process.env.PATH = [
@@ -12,6 +13,8 @@ if (process.platform === 'darwin') {
 
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
+
+tasks.bind(electron);
 
 let mainWindow: electron.BrowserWindow;
 const createWindow = () => {

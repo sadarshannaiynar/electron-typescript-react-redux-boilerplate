@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`buttonReducer Tests should return state for DECREMENT_VALUE 1`] = `
+Object {
+  "error": "Error",
+  "output": "Output",
+  "value": 2,
+}
+`;
+
+exports[`buttonReducer Tests should return state for EXEC_LS 1`] = `
+Object {
+  "error": "",
+  "output": "",
+  "value": 5,
+}
+`;
+
+exports[`buttonReducer Tests should return state for EXEC_LS_ERROR 1`] = `
+Object {
+  "error": "Error",
+  "output": "",
+  "value": 5,
+}
+`;
+
+exports[`buttonReducer Tests should return state for EXEC_LS_SUCCESS 1`] = `
+Object {
+  "error": "",
+  "output": "Success",
+  "value": 5,
+}
+`;
+
+exports[`buttonReducer Tests should return state for INCREMENT_VALUE 1`] = `
+Object {
+  "error": "Error",
+  "output": "Output",
+  "value": 5,
+}
+`;
+
+exports[`buttonReducer Tests should return state for SET_VALUE 1`] = `
+Object {
+  "error": "Error",
+  "output": "Output",
+  "value": 1,
+}
+`;
+
+exports[`buttonReducer Tests should return the default state 1`] = `
+Object {
+  "error": "",
+  "output": "",
+  "value": 0,
+}
+`;
+
+exports[`buttonReducer Tests should use the default state when state is null 1`] = `
+Object {
+  "error": "",
+  "output": "",
+  "value": 1,
+}
+`;
+
+exports[`buttonReducer Tests should use the default state when state is undefined 1`] = `
+Object {
+  "error": "",
+  "output": "",
+  "value": 1,
+}
+`;

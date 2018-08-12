@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`buttonActions Tests Actions Tests should return the decrement action 1`] = `
+Object {
+  "meta": undefined,
+  "payload": undefined,
+  "type": "DECREMENT_VALUE",
+}
+`;
+
+exports[`buttonActions Tests Actions Tests should return the errorExecuteLs action 1`] = `
+Object {
+  "meta": undefined,
+  "payload": "Error",
+  "type": "EXEC_LS_ERROR",
+}
+`;
+
+exports[`buttonActions Tests Actions Tests should return the increment action 1`] = `
+Object {
+  "meta": undefined,
+  "payload": undefined,
+  "type": "INCREMENT_VALUE",
+}
+`;
+
+exports[`buttonActions Tests Actions Tests should return the setValue action 1`] = `
+Object {
+  "meta": undefined,
+  "payload": 0,
+  "type": "SET_VALUE",
+}
+`;
+
+exports[`buttonActions Tests Actions Tests should return the startExecuteLs action 1`] = `
+Object {
+  "meta": undefined,
+  "payload": undefined,
+  "type": "EXEC_LS",
+}
+`;
+
+exports[`buttonActions Tests Actions Tests should return the successExecuteLs action 1`] = `
+Object {
+  "meta": undefined,
+  "payload": "Success",
+  "type": "EXEC_LS_SUCCESS",
+}
+`;
+
+exports[`buttonActions Tests Store Dispatch Tests should update the store on decrement action 1`] = `
+Object {
+  "meta": undefined,
+  "payload": undefined,
+  "type": "DECREMENT_VALUE",
+}
+`;
+
+exports[`buttonActions Tests Store Dispatch Tests should update the store on executeLs action with error reply 1`] = `
+Array [
+  Object {
+    "meta": undefined,
+    "payload": undefined,
+    "type": "EXEC_LS",
+  },
+  Object {
+    "meta": undefined,
+    "payload": "Error",
+    "type": "EXEC_LS_ERROR",
+  },
+]
+`;
+
+exports[`buttonActions Tests Store Dispatch Tests should update the store on executeLs action with success reply 1`] = `
+Array [
+  Object {
+    "meta": undefined,
+    "payload": undefined,
+    "type": "EXEC_LS",
+  },
+  Object {
+    "meta": undefined,
+    "payload": "Output",
+    "type": "EXEC_LS_SUCCESS",
+  },
+]
+`;
+
+exports[`buttonActions Tests Store Dispatch Tests should update the store on increment action 1`] = `
+Object {
+  "meta": undefined,
+  "payload": undefined,
+  "type": "INCREMENT_VALUE",
+}
+`;
+
+exports[`buttonActions Tests Store Dispatch Tests should update the store on setValue action 1`] = `
+Object {
+  "meta": undefined,
+  "payload": 0,
+  "type": "SET_VALUE",
+}
+`;

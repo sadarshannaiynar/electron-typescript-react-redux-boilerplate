@@ -7,6 +7,5 @@
     "jsRules": {},
     "rules": {
         "quotemark": [true, "single"]
-    },
-    "rulesDirectory": []
+    }
 }

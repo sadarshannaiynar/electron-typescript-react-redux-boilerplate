@@ -16,6 +16,13 @@ module.exports = {
     __dirname: false,
     child_process: false,
   },
+  resolve: {
+    extensions: [
+      '*',
+      '.js',
+      '.ts',
+    ],
+  },
   module: {
     rules: [
       {

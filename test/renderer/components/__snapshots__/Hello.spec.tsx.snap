@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HelloComponent /> Tests Rendering Tests should match the snapshot 1`] = `
+<div>
+  <div>
+    Hello World!
+  </div>
+  <h4
+    className="value"
+  >
+    0
+  </h4>
+  <button
+    className="increment-btn"
+    onClick={[MockFunction]}
+  >
+    Increment
+  </button>
+   
+  <button
+    className="decrement-btn"
+    onClick={[MockFunction]}
+  >
+    Decrement
+  </button>
+  <br />
+  <br />
+  Type a value:
+  <input
+    onChange={[Function]}
+    type="text"
+  />
+  <br />
+  <br />
+  <button
+    className="execute-ls-btn"
+    onClick={[MockFunction]}
+  >
+    Execute LS Command
+  </button>
+  <br />
+  <br />
+  <div
+    className="output"
+  >
+    Output: 
+    Output
+  </div>
+  <br />
+  <br />
+  <div
+    className="error"
+  >
+    Error: 
+    Error
+  </div>
+</div>
+`;

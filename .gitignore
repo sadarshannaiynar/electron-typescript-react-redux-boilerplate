@@ -8,6 +8,9 @@ node_modules
 .vscode
 .idea
 
+# Coverage
+coverage
+
 # Build files
 src/main/dist/main
 src/main/dist/renderer
