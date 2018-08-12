@@ -1,4 +1,4 @@
-import { IpcMain, IpcMessageEvent, IpcRenderer } from 'electron';
+import { IpcMessageEvent } from 'electron';
 import reduxMockStore from 'redux-mock-store';
 import reduxThunk from 'redux-thunk';
 import { EXEC_LS } from '../../../src/common/constants/commandTypes';

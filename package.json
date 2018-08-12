@@ -15,9 +15,14 @@
     "start:main": "electron ./src/main/dist/main/index.js",
     "start:main-dev": "cross-env NODE_ENV=dev gulp start:devwatch",
     "start:renderer-dev": "NODE_ENV=dev webpack-dev-server --config webpack.config.renderer.js",
+    "pretest:renderer": "rimraf coverage/renderer",
+    "test:renderer": "jest --notify --verbose -c jest.config.renderer.js",
+    "test:renderer-watch": "jest --runInBand --watch --notify --verbose -c jest.config.renderer.js",
+    "pretest:main": "rimraf coverage/main",
+    "test:main": "jest --notify --verbose -c jest.config.main.js",
+    "test:main-watch": "jest --runInBand --watch --notify --verbose -c jest.config.main.js",
     "pretest": "rimraf coverage",
     "test": "jest --notify --verbose",
-    "pretest:watch": "npm run pretest",
     "test:watch": "jest --watch --notify --verbose"
   },
   "keywords": [

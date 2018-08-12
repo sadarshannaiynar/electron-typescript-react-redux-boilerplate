@@ -7,7 +7,7 @@ module.exports = {
   transform: {
     '^.+\\.tsx?$': 'ts-jest',
   },
-  testRegex: '/test/(main|renderer)/.*.spec.tsx?$',
+  testRegex: '/test/main/.*.spec.tsx?$',
   moduleFileExtensions: [
     'ts',
     'tsx',
@@ -17,17 +17,12 @@ module.exports = {
     'node',
   ],
   collectCoverage: true,
+  coverageDirectory: '<rootDir>/coverage/main',
   collectCoverageFrom: [
-    '**/src/renderer/**/*.{ts,tsx}',
     '**/src/main/**/*.{ts,tsx}',
     '!src/main/dist',
     '!src/main/tasks/index.ts',
     '!src/main/index.ts',
-    '!src/renderer/store.ts',
-    '!src/renderer/index.tsx',
-    '!src/renderer/reducers/index.ts',
   ],
-  snapshotSerializers: ['enzyme-to-json/serializer'],
-  setupTestFrameworkScriptFile: '<rootDir>/test/renderer/setupEnzyme.ts',
-  testPathIgnorePatterns: ['/node_modules/', 'setupEnzyme.ts', 'store.ts'],
+  testPathIgnorePatterns: ['/node_modules/'],
 }
