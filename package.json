@@ -88,7 +88,6 @@
     "redux-thunk": "^2.3.0",
     "rimraf": "^2.6.2",
     "sass-loader": "^7.1.0",
-    "snyk": "^1.90.0",
     "source-map-loader": "^0.2.3",
     "spawn-sync": "^2.0.0",
     "style-loader": "^0.21.0",
