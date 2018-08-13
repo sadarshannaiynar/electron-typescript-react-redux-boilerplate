@@ -1,6 +1,6 @@
 const path = require('path');
 
-const BUILD_DIR = path.resolve(__dirname, '../../src/main/dist/main');
+const BUILD_DIR = path.resolve(__dirname, '../../src/main/dist');
 const APP_DIR = path.resolve(__dirname, '../../src/main');
 
 module.exports = {

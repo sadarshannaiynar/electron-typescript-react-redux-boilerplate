@@ -1,11 +1,17 @@
 {
   "name": "electron-typescript-react-boilerplate",
   "version": "1.0.0",
-  "description": "A boilerplate for electron typescript and react",
+  "description": "A boilerplate for Electron Typescript, React and Redux",
   "main": "src/main/dist/main/index.js",
   "scripts": {
     "build": "cross-env NODE_ENV=prod gulp build",
     "build:main": "NODE_ENV=prod webpack --progress --config webpack.config.electron.js",
+    "build:renderer": "NODE_ENV=prod webpack --progress --config webpack.config.renderer.js",
+    "pregenerate": "rimraf build && npm run build",
+    "generate": "electron-builder -mwl",
+    "generate:windows": "npm run build && electron-builder --windows",
+    "generate:linux": "npm run build && electron-builder --linux",
+    "generate:mac": "npm run build && electron-builder --mac",
     "lint:renderer": "tslint -p ./src/renderer/tsconfig.json",
     "lint:main": "tslint -p ./src/main/tsconfig.json",
     "lint:styles": "stylelint \"./src/renderer/styles/**/*.scss\"",
@@ -29,9 +35,9 @@
     "electron",
     "typescript",
     "react",
+    "redux",
     "node"
   ],
-  "author": "Adarsh",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {

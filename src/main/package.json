@@ -1,0 +1,26 @@
+{
+  "name": "electron-app",
+  "version": "1.0.0",
+  "description": "A Electron app made using Typescript, React and Redux",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "electron ./dist/index.js"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "keywords": [
+    "electron",
+    "react",
+    "redux",
+    "node"
+  ],
+  "author": {
+    "name": "ABC",
+    "email": "abc@abc.com"
+  },
+  "homepage": "https://www.abc.com",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}

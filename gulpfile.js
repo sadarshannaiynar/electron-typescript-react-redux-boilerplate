@@ -26,7 +26,7 @@ gulp.task('reload-page', (done) => {
 
 gulp.task('clean', (done) => {
   del([
-    './src/main/dist/main/**/*',
+    './src/main/dist/index.js',
     './src/main/dist/renderer/**/*',
   ]);
   done();

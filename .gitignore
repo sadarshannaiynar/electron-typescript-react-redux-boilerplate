@@ -14,6 +14,7 @@ coverage
 # Build files
 src/main/dist/main
 src/main/dist/renderer
+build
 
 # Log
 *.log

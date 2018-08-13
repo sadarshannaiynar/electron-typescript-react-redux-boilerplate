@@ -30,7 +30,7 @@ const createWindow = () => {
     mainWindow.loadURL('http://localhost:8100');
     mainWindow.webContents.openDevTools();
   } else {
-    mainWindow.loadURL(`file://${path.resolve(__dirname, '../index.html')}`);
+    mainWindow.loadURL(`file://${path.resolve(__dirname, 'index.html')}`);
   }
 
   mainWindow.on('closed', () => {
