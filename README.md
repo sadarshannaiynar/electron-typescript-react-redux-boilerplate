@@ -1,5 +1,7 @@
 # TYPESCRIPT, ELECTRON, REACT AND REDUX BOILERPLATE
 
+[![Known Vulnerabilities](https://snyk.io/test/github/sadarshannaiynar/electron-typescript-react-redux-boilerplate/badge.svg)](https://snyk.io/test/github/sadarshannaiynar/electron-typescript-react-redux-boilerplate)
+
 This a full fledged boilerplate for creating Electron apps with Typescript and React. Pull requests are welcome for the repository.
 
 ## TECHNOLOGIES USED
