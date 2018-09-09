@@ -16,6 +16,7 @@ module.exports = {
     'json',
     'node',
   ],
+  coverageReporters: ['json', 'lcov', 'text', 'text-summary'],
   collectCoverage: true,
   coverageDirectory: '<rootDir>/coverage/renderer',
   collectCoverageFrom: [
@@ -27,4 +28,10 @@ module.exports = {
   snapshotSerializers: ['enzyme-to-json/serializer'],
   setupTestFrameworkScriptFile: '<rootDir>/test/renderer/setupEnzyme.ts',
   testPathIgnorePatterns: ['/node_modules/', 'setupEnzyme.ts', 'store.ts'],
+  watchPathIgnorePatterns: [
+    '<rootDir>/coverage/',
+    '<rootDir>/src/main/',
+    '<rootDir>/test/main/',
+    '<rootDir>/jest.config.main.js',
+  ],
 }

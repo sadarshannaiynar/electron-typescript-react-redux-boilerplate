@@ -16,6 +16,7 @@ module.exports = {
     'json',
     'node',
   ],
+  coverageReporters: ['json', 'lcov', 'text', 'text-summary'],
   collectCoverage: true,
   coverageDirectory: '<rootDir>/coverage/main',
   collectCoverageFrom: [
@@ -23,6 +24,12 @@ module.exports = {
     '!src/main/dist',
     '!src/main/tasks/index.ts',
     '!src/main/index.ts',
+  ],
+  watchPathIgnorePatterns: [
+    '<rootDir>/coverage/',
+    '<rootDir>/src/renderer/',
+    '<rootDir>/test/renderer/',
+    '<rootDir>/jest.config.renderer.js',
   ],
   testPathIgnorePatterns: ['/node_modules/'],
 }

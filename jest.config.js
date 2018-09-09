@@ -16,6 +16,7 @@ module.exports = {
     'json',
     'node',
   ],
+  coverageReporters: ['json', 'lcov', 'text', 'text-summary'],
   collectCoverage: true,
   collectCoverageFrom: [
     '**/src/renderer/**/*.{ts,tsx}',
