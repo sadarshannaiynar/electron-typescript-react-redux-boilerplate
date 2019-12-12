@@ -32,7 +32,9 @@
     "test:main-watch": "jest --runInBand --watch --notify --verbose -c jest.config.main.js",
     "pretest": "rimraf coverage",
     "test": "jest --notify --verbose",
-    "test:watch": "jest --watch --notify --verbose"
+    "test:watch": "jest --watch --notify --verbose",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "keywords": [
     "electron",
@@ -104,6 +106,8 @@
     "url-loader": "^1.0.1",
     "webpack": "^4.16.3",
     "webpack-cli": "^3.1.0",
-    "webpack-dev-server": "^3.1.5"
-  }
+    "webpack-dev-server": "^3.1.5",
+    "snyk": "^1.258.2"
+  },
+  "snyk": true
 }
