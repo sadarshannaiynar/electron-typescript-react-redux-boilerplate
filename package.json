@@ -71,7 +71,7 @@
     "jest": "^23.5.0",
     "lodash": "^4.17.10",
     "mini-css-extract-plugin": "^0.4.1",
-    "node-sass": "4.9.3",
+    "node-sass": "4.11.0",
     "plugin-error": "^1.0.1",
     "postcss": "^7.0.2",
     "postcss-loader": "^2.1.6",
