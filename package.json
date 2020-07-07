@@ -57,7 +57,7 @@
     "cross-env": "^5.2.0",
     "css-loader": "^1.0.0",
     "del": "^3.0.0",
-    "electron": "^2.0.6",
+    "electron": "^7.2.4",
     "electron-builder": "^20.26.1",
     "electron-connect": "^0.6.3",
     "electron-ipc-mock": "^0.0.3",
